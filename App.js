@@ -7,13 +7,14 @@ import Ch1 from './screens/Ch1';
 import { NavigationContainer } from '@react-navigation/native';
 import ExcerciseScreen from './screens/ExerciseScreen';
 import ListScreen from './screens/ListScreen';
+import ButtonScreen from './screens/ButtonScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='List'>
+      <Stack.Navigator initialRouteName='Button'>
         <Stack.Screen
           name='Home'
           component={MainScreen}
@@ -21,6 +22,10 @@ export default function App() {
         <Stack.Screen
           name='List'
           component={ListScreen}
+        ></Stack.Screen>
+        <Stack.Screen
+          name='Button'
+          component={ButtonScreen}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
