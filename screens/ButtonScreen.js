@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button, StyleSheet } from 'react-native'
+import { Text, View, Button, StyleSheet, TouchableOpacity } from 'react-native'
 
 const ButtonScreen = () => {
     const handlePress = () => {
@@ -15,6 +15,13 @@ const ButtonScreen = () => {
                 color='darkblue'
                 onPress={handlePress}
             ></Button>
+
+            <TouchableOpacity
+                style={styles.touchBtn}
+                onPress={() => console.log("Touch Element Clicked")}
+            >
+                <Text style={styles.btnTxt}>Click Touchable Element</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -29,6 +36,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24,
     marginBottom: 20
+  },
+  touchBtn: {
+    backgroundColor: "purple",
+    marginVertical: 15,
+    paddingVertical: 20,
+    borderRadius: 6,
+    marginHorizontal: 20
+  },
+  btnTxt: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 25,
+    fontWeight: 'bold'
   }
 });
 
