@@ -9,6 +9,7 @@ import ExcerciseScreen from './screens/ExerciseScreen';
 import ListScreen from './screens/ListScreen';
 import ButtonScreen from './screens/ButtonScreen';
 import MenuScreen from './screens/MenuScreen';
+import StudentsScreen from './screens/StudentsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,10 @@ export default function App() {
         <Stack.Screen
           name='Menu'
           component={MenuScreen}
+        ></Stack.Screen>
+        <Stack.Screen
+          name='Students'
+          component={StudentsScreen}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

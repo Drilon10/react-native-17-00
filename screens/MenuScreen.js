@@ -1,4 +1,4 @@
-ay 7import React, { Component } from 'react'
+import React, { Component } from 'react'
 import { Text, View, StyleSheet, Button, TouchableOpacity } from 'react-native'
 
 const MenuScreen = (props) => {
@@ -15,6 +15,13 @@ const MenuScreen = (props) => {
                 onPress={() => props.navigation.navigate('Button')}
             >
                 <Text style={styles.btnTxt}>Go to Buttons</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={styles.touchBtn}
+                onPress={() => props.navigation.navigate('Students')}
+            >
+                <Text style={styles.btnTxt}>Go to Students</Text>
             </TouchableOpacity>
 
 
