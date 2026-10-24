@@ -8,13 +8,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import ExcerciseScreen from './screens/ExerciseScreen';
 import ListScreen from './screens/ListScreen';
 import ButtonScreen from './screens/ButtonScreen';
+import MenuScreen from './screens/MenuScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Button'>
+      <Stack.Navigator initialRouteName='Menu'>
         <Stack.Screen
           name='Home'
           component={MainScreen}
@@ -26,6 +27,10 @@ export default function App() {
         <Stack.Screen
           name='Button'
           component={ButtonScreen}
+        ></Stack.Screen>
+        <Stack.Screen
+          name='Menu'
+          component={MenuScreen}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
