@@ -10,13 +10,14 @@ import ListScreen from './screens/ListScreen';
 import ButtonScreen from './screens/ButtonScreen';
 import MenuScreen from './screens/MenuScreen';
 import StudentsScreen from './screens/StudentsScreen';
+import BoxScreen from './screens/BoxScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Menu'>
+      <Stack.Navigator initialRouteName='Box'>
         <Stack.Screen
           name='Home'
           component={MainScreen}
@@ -36,6 +37,10 @@ export default function App() {
         <Stack.Screen
           name='Students'
           component={StudentsScreen}
+        ></Stack.Screen>
+        <Stack.Screen
+          name='Box'
+          component={BoxScreen}
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
